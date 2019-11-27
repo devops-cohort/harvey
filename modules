@@ -1,0 +1,45 @@
+### initialize #to create a directory if one doesnt exist. user should only be asked once until they choose to chance directory
+Ask user where directory is 
+save directory
+check for "music" folder
+if exists in directory: 
+  check for subgenres folders (and un-identified folder)
+  if they exist:
+    create them
+if doesn't exist in directory:
+  create folder and subgenres folder 
+set directory set to True 
+
+### front end #choices for user for what they want to accomplish 
+Options
+1. run code 
+2. add/ amend directory/ genres 
+3. sort un-identified music 
+3. close 
+
+### Find music files within music folder 
+check within directory for files ending with .mp3/ .wav and /flac
+if the file is mp3:
+  look at id3 tags and check artist
+    if available check for genre and bpm tag too:
+      compare with data in database and sort into according folders. e.g. if artist is Outkast move mp3 to hiphop folder 
+if file is .flac or .wav:
+  warn user that those file types are often unplayable on cdjs
+  give user option continue or not
+  if continue = yes:
+    sort songs into genre folders
+  if continue = no:
+    sort songs into unsorted folder 
+inform user that search and sort is finished
+report which genres have new tracks. e.g. table with headings for genres containing song names
+report which songs have been left unsorted (unidentified)
+user choice to sort themselves:
+if yes:
+  user inputs genre type
+  artist added to database 
+if no:
+  unsorted tracks left in file
+  inform user they can sort at another time 
+
+
+ 
